@@ -33,6 +33,7 @@
     color: white;
     text-align: center;
     padding: 20px 0;
+    height: 100vh;
   }
   
   .section-cards {
@@ -41,7 +42,7 @@
   
   .section {
     display: block; /* Stack vertically on mobile */
-    margin-bottom: 20px;
+    height: 100vh;
   }
   
   .section .text {
