@@ -1,0 +1,106 @@
+/* Base mobile styles */
+.vertical-navbar {
+    display: flex; /* Establish as a flex container */
+    flex-direction: row; /* Stack items vertically */
+    justify-content: center; /* Center items horizontally within the navbar */
+    background-color: #333;
+    padding: 20px;
+    margin: 0;
+  }
+  
+  .nav-item {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 10px; /* Spacing between items */
+  }
+  
+  .nav-item:hover {
+    background-color: #555; /* Hover effect */
+    cursor: pointer;
+  }
+  
+  .homePage {
+    font-family: 'Arial', sans-serif;
+    display: block; /* Stack vertically on mobile */
+    margin: 0 auto;
+  }
+  
+  .header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+  }
+  
+  .section-cards {
+    padding: 20px; /* Smaller padding for mobile */
+  }
+  
+  .section {
+    display: block; /* Stack vertically on mobile */
+    margin-bottom: 20px;
+  }
+  
+  .section .text {
+    padding-right: 0; /* No padding on the right on mobile */
+  }
+  
+  .section .image {
+    height: 150px; /* Smaller image height for mobile */
+    background-color: #ccc; /* Placeholder color */
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-top: 20px; /* Margin top for mobile */
+  }
+  
+  /* Styles for larger screens */
+  @media (min-width: 768px) {
+    .vertical-navbar {
+      display: flex; /* Show the navbar for larger screens */
+      flex-direction: column;
+      align-items: flex-start;
+      width: 230px; /* Fixed width for sidebar */
+      height: 100vh; /* Full-height sidebar */
+      position: fixed; /* Fixed position for sidebar */
+      top: 0; /* Align to top */
+      left: 0; /* Align to left */
+      z-index: 10; /* Above other content */
+    }
+  
+    .homePage {
+      display: flex; /* Enable flex layout for larger screens */
+      padding-left: 250px; /* Make space for the navbar */
+    }
+  
+    .header {
+      position: static; /* Header becomes part of the flow on larger screens */
+    }
+  
+    .section-cards {
+      padding: 50px; /* Larger padding for larger screens */
+      flex-grow: 1; /* Allow the section cards to fill available space */
+    }
+  
+    .section {
+      display: flex; /* Flex layout for sections */
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 20px;
+    }
+  
+    .section .text {
+      flex-basis: 60%; /* Allocate 60% of space to text */
+      padding-right: 20px; /* Restore right padding */
+    }
+  
+    .section .image {
+      flex-basis: 30%; /* Allocate 30% of space to image */
+      height: 200px; /* Larger image height for larger screens */
+      margin-top: 0; /* Remove top margin */
+    }
+  }
+  
